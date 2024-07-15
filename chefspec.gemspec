@@ -21,9 +21,9 @@ Gem::Specification.new do |s|
   s.files         = %w{LICENSE Rakefile Gemfile chefspec.gemspec} + Dir.glob("{lib,templates,spec}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
   s.require_paths = ["lib"]
 
-  s.required_ruby_version = ">= 2.5"
+  s.required_ruby_version = ">= 3.3"
 
-  s.add_dependency "chef", ">= 15"
+  s.add_dependency "chef", "~> 18.0"
   s.add_dependency "chef-cli"
   s.add_dependency "fauxhai-chef", ">= 9.3"
   s.add_dependency "rspec",   "~> 3.0"

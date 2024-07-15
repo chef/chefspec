@@ -15,8 +15,8 @@ if ENV["GEMFILE_MOD"]
   puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
   instance_eval(ENV["GEMFILE_MOD"])
 else
-  gem "chef", git: "https://github.com/chef/chef"
-  gem "ohai", git: "https://github.com/chef/ohai"
+  gem "chef", "~> 18.0"
+  gem "ohai", "~> 18.0"
 end
 
 # TODO: remove when we drop ruby 2.5
