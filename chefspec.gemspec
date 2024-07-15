@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
   s.add_dependency "chef-cli"
   s.add_dependency "fauxhai-chef", ">= 9.3"
   s.add_dependency "rspec",   "~> 3.0"
+
+  # this needs to be remedied before Ruby 3.3
   s.add_dependency "logger", "< 1.6"
 
   # temporary restriction to a version of rspec-expectations that includes the
