@@ -5,7 +5,7 @@ require "yard/rake/yardoc_task"
 require "tmpdir"
 require "rspec"
 require "chefspec"
-require "chefstyle"
+require "cookstyle/chefstyle"
 
 require "chef/version"
 
