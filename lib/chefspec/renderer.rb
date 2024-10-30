@@ -66,10 +66,36 @@ module ChefSpec
 
       if Chef::Mixin::Template.const_defined?(:TemplateContext) # Chef 11+
         template_context = Chef::Mixin::Template::TemplateContext.new([])
+
+        # this is from lib/chef/provider/template/content.rb roughly
+        # Deal with any DelayedEvaluator values in the template variables.
+        visitor = lambda do |obj|
+          case obj
+          when Hash
+            # If this is an Attribute object, we need to change class otherwise
+            # we get the immutable behavior. This could probably be fixed by
+            # using Hash#transform_values once we only support Ruby 2.4.
+            obj_class = obj.is_a?(Chef::Node::ImmutableMash) ? Mash : obj.class
+            # Avoid mutating hashes in the resource in case we're changing anything.
+            obj.each_with_object(obj_class.new) do |(key, value), memo|
+              memo[key] = visitor.call(value)
+            end
+          when Array
+            # Avoid mutating arrays in the resource in case we're changing anything.
+            obj.map { |value| visitor.call(value) }
+          when Chef::DelayedEvaluator
+            resource.instance_eval(&obj)
+          else
+            obj
+          end
+        end
+
+        variables = visitor.call(template.variables)
+
         template_context.update({
           node: chef_run.node,
           template_finder: template_finder(chef_run, cookbook_name),
-        }.merge(template.variables))
+        }.merge(variables))
         if template.respond_to?(:helper_modules) # Chef 11.4+
           template_context._extend_modules(template.helper_modules)
         end
