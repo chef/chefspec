@@ -10,7 +10,7 @@ describe ChefSpec::Renderer do
   end
 
   let(:chef_run) { double("chef_run", { node: "node" }) }
-  let(:resource) { double("resource", { cookbook: "cookbook", source: "source", variables: {} }) }
+  let(:resource) { double("resource", { cookbook: "cookbook", source: "source", variables: { x: "y", foo: Chef::DelayedEvaluator.new { "bar" } } }) }
   subject { described_class.new(chef_run, resource) }
 
   describe "#content" do
@@ -64,6 +64,22 @@ describe ChefSpec::Renderer do
 
       expect(chef_template_context).to receive(:_extend_modules).with(resource.helper_modules)
       expect(subject.content).to eq("rendered template content")
+    end
+  end
+
+  describe "content_from_template with lazy/DelayedEvaluator" do
+    it "renders the template by extending modules for rendering paritals within the template" do
+      cookbook_collection = {}
+      cookbook_collection["cookbook"] = double("", { preferred_filename_on_disk_location: "/template/location" } )
+      allow(subject).to receive(:cookbook_collection).with("node").and_return(cookbook_collection)
+      allow(subject).to receive(:template_finder)
+
+      allow(resource).to receive(:helper_modules).and_return([Module.new])
+      allow(resource).to receive(:resource_name).and_return("template")
+
+      allow(IO).to receive(:binread).and_return('rendered template <%= @foo %> content')
+
+      expect(subject.content).to eq("rendered template bar content")
     end
   end
 end
