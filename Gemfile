@@ -8,7 +8,7 @@ group :development do
   gem "yard"
   gem "pry"
   gem "pry-byebug"
-  gem "chefstyle"
+  gem "cookstyle"
 end
 
 if ENV["GEMFILE_MOD"]
