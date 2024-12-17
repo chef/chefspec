@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.9 -->
-## [v9.3.9](https://github.com/chef/chefspec/tree/v9.3.9) (2024-10-31)
+<!-- latest_release 9.3.10 -->
+## [v9.3.10](https://github.com/chef/chefspec/tree/v9.3.10) (2024-12-17)
 
 #### Merged Pull Requests
-- add support for DelayedEvaluator/lazy templates [#14](https://github.com/chef/chefspec/pull/14) ([mattp-](https://github.com/mattp-))
+- [CI] Drop EOL Rubies [#15](https://github.com/chef/chefspec/pull/15) ([dafyddcrosby](https://github.com/dafyddcrosby))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- [CI] Drop EOL Rubies [#15](https://github.com/chef/chefspec/pull/15) ([dafyddcrosby](https://github.com/dafyddcrosby)) <!-- 9.3.10 -->
 - add support for DelayedEvaluator/lazy templates [#14](https://github.com/chef/chefspec/pull/14) ([mattp-](https://github.com/mattp-)) <!-- 9.3.9 -->
 <!-- release_rollup -->
 <!-- latest_stable_release -->
