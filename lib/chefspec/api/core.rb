@@ -21,6 +21,10 @@ module ChefSpec
         end
       end
 
+      before do
+        allow(::Chef).to recieve(:node).and_return(chef_node) if chefspec_platform
+      end
+
       # Let variables to set data in a scoped way. Used below by
       # {ClassMethods#platform}.
       let(:chefspec_default_attributes) { chefspec_attributes(:default_attributes) }
@@ -74,6 +78,10 @@ module ChefSpec
 
       # By default, run the recipe in the base `describe` block.
       let(:chef_run) { chef_runner.converge(described_recipe) }
+
+      # Give a default accessor for stubbing things on the node object
+      # associated with the runner instance.
+      let(:chef_node) { chef_runner.node }
 
       # Helper method for some of the nestable test value methods like
       # {ClassMethods#default_attributes} and {ClassMethods#step_into}.
