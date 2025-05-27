@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.13 -->
-## [v9.3.13](https://github.com/chef/chefspec/tree/v9.3.13) (2025-05-20)
+<!-- latest_release 9.3.14 -->
+## [v9.3.14](https://github.com/chef/chefspec/tree/v9.3.14) (2025-05-27)
 
 #### Merged Pull Requests
-- add support for Chef::Mixin::shellout [#8](https://github.com/chef/chefspec/pull/8) ([jasonwbarnett](https://github.com/jasonwbarnett))
+- Adding chef/chef&#39;s CODEOWNERS to chefspec [#16](https://github.com/chef/chefspec/pull/16) ([jaymzh](https://github.com/jaymzh))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Adding chef/chef&#39;s CODEOWNERS to chefspec [#16](https://github.com/chef/chefspec/pull/16) ([jaymzh](https://github.com/jaymzh)) <!-- 9.3.14 -->
 - add support for Chef::Mixin::shellout [#8](https://github.com/chef/chefspec/pull/8) ([jasonwbarnett](https://github.com/jasonwbarnett)) <!-- 9.3.13 -->
 - add stub for Chef.node [#9](https://github.com/chef/chefspec/pull/9) ([jasonwbarnett](https://github.com/jasonwbarnett)) <!-- 9.3.12 -->
 - Migrate from Chefstyle to Cookstyle [#12](https://github.com/chef/chefspec/pull/12) ([dafyddcrosby](https://github.com/dafyddcrosby)) <!-- 9.3.11 -->
