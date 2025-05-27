@@ -22,7 +22,7 @@ module ChefSpec
       end
 
       before do
-        allow(::Chef).to recieve(:node).and_return(chef_node) if chefspec_platform
+        allow(::Chef).to receive(:node).and_return(chef_node) if chefspec_platform
       end
 
       # Let variables to set data in a scoped way. Used below by
