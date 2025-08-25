@@ -77,7 +77,7 @@ describe ChefSpec::Renderer do
       allow(resource).to receive(:helper_modules).and_return([Module.new])
       allow(resource).to receive(:resource_name).and_return("template")
 
-      allow(IO).to receive(:binread).and_return('rendered template <%= @foo %> content')
+      allow(IO).to receive(:binread).and_return("rendered template <%= @foo %> content")
 
       expect(subject.content).to eq("rendered template bar content")
     end

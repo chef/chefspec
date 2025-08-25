@@ -11,19 +11,17 @@ group :development do
   gem "cookstyle"
 end
 
-if ENV["GEMFILE_MOD"]
-  puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
-  instance_eval(ENV["GEMFILE_MOD"])
-else
-  gem "chef", git: "https://github.com/chef/chef"
-  gem "ohai", git: "https://github.com/chef/ohai"
-end
+gem "chef", git: "https://github.com/chef/chef.git"
+gem "ohai", git: "https://github.com/chef/ohai.git"
 
-# TODO: remove when we drop ruby 2.5
-if Gem.ruby_version < Gem::Version.new("2.6")
-  # 16.7.23 required ruby 2.6+
-  gem "chef-utils", "< 16.7.23"
-end
+# if ENV["GEMFILE_MOD"]
+#   puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
+#   instance_eval(ENV["GEMFILE_MOD"])
+# else
+#   gem "chef", git: "https://github.com/chef/chef"
+#   gem "ohai", git: "https://github.com/chef/ohai"
+# end
+
 
 # If you want to load debugging tools into the bundle exec sandbox,
 # add these additional dependencies into Gemfile.local
