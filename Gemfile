@@ -8,11 +8,11 @@ group :development do
   gem "yard"
   gem "pry"
   gem "pry-byebug"
-  gem "cookstyle"
 end
 
 gem "chef", git: "https://github.com/chef/chef.git"
 gem "ohai", git: "https://github.com/chef/ohai.git"
+gem "syslog"
 
 # if ENV["GEMFILE_MOD"]
 #   puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
