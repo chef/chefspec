@@ -1,3 +1,5 @@
+require 'chefspec'
+
 describe 'stubs_for' do
   platform 'ubuntu'
   step_into :stubs_for_test, :stubs_for_old
@@ -51,15 +53,14 @@ describe 'stubs_for' do
 
       it do
         stubs_for_current_value('stubs_for_test[test]') do |res|
-          fake_result = double('shell_out_result', stdout: 'asdf', stderr: '', exitstatus: 0)
-          allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(fake_result)
+          allow(res).to receive_shell_out('this_is_not_a_cmd', stdout: 'asdf')
         end
         subject
       end
 
       it do
         stubs_for_resource('stubs_for_test[test]', current_value: false) do |res|
-          allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(stdout: 'asdf')
+          allow(res).to receive_shell_out('this_is_not_a_cmd', stdout: 'asdf')
         end
         expect { subject }.to raise_error ChefSpec::Error::ShellOutNotStubbed
       end
@@ -74,8 +75,7 @@ describe 'stubs_for' do
 
         it do
           stubs_for_current_value('stubs_for_old[test]') do |res|
-            fake_result = double('shell_out_result', stdout: 'asdf', stderr: '', exitstatus: 0)
-            allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(fake_result)
+            allow(res).to receive_shell_out('this_is_not_a_cmd', stdout: 'asdf')
           end
           subject
         end
@@ -154,7 +154,7 @@ describe 'stubs_for' do
 
       context 'with stubs_for_current_value' do
         stubs_for_current_value('stubs_for_test[test]') do |res|
-          allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(stdout: 'asdf')
+          allow(res).to receive_shell_out('this_is_not_a_cmd', stdout: 'asdf')
         end
 
         it { subject }
@@ -162,7 +162,7 @@ describe 'stubs_for' do
 
       context 'with current_value: false' do
         stubs_for_resource('stubs_for_test[test]', current_value: false) do |res|
-          allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(stdout: 'asdf')
+          allow(res).to receive_shell_out('this_is_not_a_cmd', stdout: 'asdf')
         end
         it { expect { subject }.to raise_error ChefSpec::Error::ShellOutNotStubbed }
       end
