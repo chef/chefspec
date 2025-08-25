@@ -51,7 +51,8 @@ describe 'stubs_for' do
 
       it do
         stubs_for_current_value('stubs_for_test[test]') do |res|
-          allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(stdout: 'asdf')
+          fake_result = double('shell_out_result', stdout: 'asdf', stderr: '', exitstatus: 0)
+          allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(fake_result)
         end
         subject
       end
@@ -73,7 +74,8 @@ describe 'stubs_for' do
 
         it do
           stubs_for_current_value('stubs_for_old[test]') do |res|
-            allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(stdout: 'asdf')
+            fake_result = double('shell_out_result', stdout: 'asdf', stderr: '', exitstatus: 0)
+            allow(res).to receive(:shell_out).with('this_is_not_a_cmd').and_return(fake_result)
           end
           subject
         end
