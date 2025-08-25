@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   schedule:
     - cron:  '42 4 * * *'
 
@@ -16,17 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [ '3.0' ]
+        ruby: [ '3.1', '3.4' ]
     name: Lint & Test with Ruby ${{ matrix.ruby }}
     steps:
-      - run: |
-          if [ "${{ matrix.ruby }}" = "2.5" ]; then
-            echo "GEMFILE_MOD=gem 'chef', '= 15.15.0'" >> $GITHUB_ENV
-          elif [ "${{ matrix.ruby }}" = "2.6" ]; then
-            echo "GEMFILE_MOD=gem 'chef', '= 15.15.0'" >> $GITHUB_ENV
-          elif [ "${{ matrix.ruby }}" = "2.7" ]; then
-            echo "GEMFILE_MOD=gem 'chef', '= 16.9.32'" >> $GITHUB_ENV
-          fi
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
         with:
