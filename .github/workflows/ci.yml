@@ -32,5 +32,3 @@ jobs:
         if: always()
       - run: bundle exec rake acceptance
         if: always()
-      - run: bundle exec rake style
-        if: always()

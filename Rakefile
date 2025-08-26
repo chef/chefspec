@@ -6,7 +6,6 @@ require "tmpdir"
 require "rspec"
 require "chefspec"
 require "cookstyle/chefstyle"
-
 require "chef/version"
 
 YARD::Rake::YardocTask.new

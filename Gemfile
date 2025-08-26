@@ -10,17 +10,15 @@ group :development do
   gem "pry-byebug"
 end
 
-gem "chef", git: "https://github.com/chef/chef.git"
-gem "ohai", git: "https://github.com/chef/ohai.git"
-gem "syslog"
+if ENV["GEMFILE_MOD"]
+  puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
+  instance_eval(ENV["GEMFILE_MOD"])
+else
+  gem "chef", git: "https://github.com/chef/chef.git"
+  gem "ohai", git: "https://github.com/chef/ohai.git"
+end
 
-# if ENV["GEMFILE_MOD"]
-#   puts "GEMFILE_MOD: #{ENV["GEMFILE_MOD"]}"
-#   instance_eval(ENV["GEMFILE_MOD"])
-# else
-#   gem "chef", git: "https://github.com/chef/chef"
-#   gem "ohai", git: "https://github.com/chef/ohai"
-# end
+gem "syslog"
 
 # If you want to load debugging tools into the bundle exec sandbox,
 # add these additional dependencies into Gemfile.local
