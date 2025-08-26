@@ -34,5 +34,4 @@ Gem::Specification.new do |s|
 
   # temporary restriction to a version of rspec-expectations that includes the
   # `RSpec::Matchers::ExpectedsForMultipleDiffs` class (renamed in 3.12.4)
-  # s.add_dependency "rspec-expectations", "<= 3.12.3"
 end
