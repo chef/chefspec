@@ -22,7 +22,7 @@ module ChefSpec::Extensions::Chef::Resource
       # something like `new_resource.class.new` so we want to call this a current_resource,
       # Otherwise it's probably a normal resource instantiation.
       mode = :resource
-      mode = :current_value if caller.any? { |x| x.include?("`load_current_resource'") || x.include?("`load_after_resource'") }
+      mode = :current_value if caller.any? { |x| x.include?("`load_current_resource'") || x.include?("`load_after_resource'") || x.include?("`load_current_value'") || x.include?("load_current_value") || x.include?("load_current_resource") }
       ChefSpec::API::StubsFor.setup_stubs_for(self, mode)
     end
   end

@@ -21,9 +21,9 @@ module ChefSpec
         signature = "#{type}(#{options[:args].map(&:inspect).join(", ")})"
 
         super({
-          type:      type,
+          type: type,
           signature: signature,
-          stub:      stub,
+          stub: stub,
           _template: :not_stubbed,
         }.merge(options))
       end

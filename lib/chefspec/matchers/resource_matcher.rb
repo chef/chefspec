@@ -1,4 +1,4 @@
-require "rspec/matchers/expecteds_for_multiple_diffs"
+# require "rspec/matchers/expecteds_for_multiple_diffs" This is now a private class and will throw errors when the require statement is executed
 require "rspec/expectations/fail_with"
 
 module ChefSpec::Matchers
@@ -104,7 +104,7 @@ module ChefSpec::Matchers
         unless matches_parameter?(parameter, expected)
           @_unmatched_parameters[parameter] = {
             expected: expected,
-            actual:   safe_send(parameter),
+            actual: safe_send(parameter),
           }
         end
       end
