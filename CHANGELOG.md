@@ -1,14 +1,15 @@
-<!-- latest_release 9.3.15 -->
-## [v9.3.15](https://github.com/chef/chefspec/tree/v9.3.15) (2025-05-27)
+<!-- latest_release 9.4.0 -->
+## [v9.4.0](https://github.com/chef/chefspec/tree/v9.4.0) (2025-08-26)
 
 #### Merged Pull Requests
-- Misspelling of &#39;receive&#39; broke downstream [#17](https://github.com/chef/chefspec/pull/17) ([tpowell-progress](https://github.com/tpowell-progress))
+- Ruby 3.4 Updates and Test fixes [#19](https://github.com/chef/chefspec/pull/19) ([johnmccrae](https://github.com/johnmccrae))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Ruby 3.4 Updates and Test fixes [#19](https://github.com/chef/chefspec/pull/19) ([johnmccrae](https://github.com/johnmccrae)) <!-- 9.4.0 -->
 - Misspelling of &#39;receive&#39; broke downstream [#17](https://github.com/chef/chefspec/pull/17) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.3.15 -->
 - Adding chef/chef&#39;s CODEOWNERS to chefspec [#16](https://github.com/chef/chefspec/pull/16) ([jaymzh](https://github.com/jaymzh)) <!-- 9.3.14 -->
 - add support for Chef::Mixin::shellout [#8](https://github.com/chef/chefspec/pull/8) ([jasonwbarnett](https://github.com/jasonwbarnett)) <!-- 9.3.13 -->
