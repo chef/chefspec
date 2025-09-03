@@ -617,3 +617,26 @@ MIT - see the accompanying [LICENSE](https://github.com/chef/chefspec/blob/main/
 
 # Copyright
 See [COPYRIGHT.md](./COPYRIGHT.md).
+
+
+## Changes that will not be accepted
+
+This section details, specifically, Pull Requests or features that will _not_ be merged:
+
+1. Matchers for non-Chef core resources. ChefSpec provides a way for cookbook maintainers to ship [custom matchers](https://github.com/chef/chefspec#chefspec-matchers) _with_ their cookbooks at distribution time.
+2. New features without accompanying unit tests and documentation.
+
+
+## Testing
+
+Whether your pull request is a bug fix or introduces new classes or methods to the project, we kindly ask that you include tests for your changes. Even if it's just a small improvement, a test is necessary to ensure the bug is never re-introduced.
+
+ChefSpec has two test suites, both runnable with Rake:
+
+```sh
+bundle exec rake unit        # fast RSpec unit tests in spec/
+bundle exec rake acceptance  # end-to-end example cookbooks in examples/
+bundle exec rake test        # run both
+```
+
+We understand that not all users submitting pull requests will be proficient with RSpec. The maintainers and community as a whole are a helpful group and can help you with writing tests. The [Better Specs](https://www.betterspecs.org/) site provides some helpful resources to get you started.
