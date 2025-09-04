@@ -618,7 +618,7 @@ If you are contributing, please see the [Contributing Guidelines](https://github
 MIT - see the accompanying [LICENSE](https://github.com/chefspec/chefspec/blob/main/LICENSE) file for details.
 
 
-## Will Not Merge
+## Changes that will not be accepted
 
 This section details, specifically, Pull Requests or features that will _not_ be merged:
 
