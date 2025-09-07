@@ -616,3 +616,19 @@ If you are contributing, please see the [Contributing Guidelines](https://github
 ## License
 
 MIT - see the accompanying [LICENSE](https://github.com/chefspec/chefspec/blob/main/LICENSE) file for details.
+
+
+## Changes that will not be accepted
+
+This section details, specifically, Pull Requests or features that will _not_ be merged:
+
+1. Matchers for non-Chef core resources. ChefSpec 3.0 introduced a way for cookbook maintainers to [package matchers _with_ their cookbooks](https://github.com/chefspec/chefspec#packaging-custom-matchers) at distribution time.
+2. New features without accompanying unit tests, cucumber tests, and documentation.
+
+
+
+## Testing
+
+Whether your pull request is a bug fix or introduces new classes or methods to the project, we kindly ask that you include tests for your changes. Even if it's just a small improvement, a test is necessary to ensure the bug is never re-introduced.
+
+We understand that not all users submitting pull requests will be proficient with RSpec. The maintainers and community as a whole are a helpful group and can help you with writing tests. The [Better Specs](http://betterspecs.org/) site should provide some helpful resources to get you started.
