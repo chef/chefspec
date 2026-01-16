@@ -616,3 +616,6 @@ If you are contributing, please see the [Contributing Guidelines](https://github
 ## License
 
 MIT - see the accompanying [LICENSE](https://github.com/chefspec/chefspec/blob/main/LICENSE) file for details.
+
+# Copyright
+See [COPYRIGHT.md](./COPYRIGHT.md).
