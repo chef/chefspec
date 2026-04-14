@@ -1,14 +1,16 @@
-<!-- latest_release 9.4.0 -->
-## [v9.4.0](https://github.com/chef/chefspec/tree/v9.4.0) (2025-08-26)
+<!-- latest_release 9.4.2 -->
+## [v9.4.2](https://github.com/chef/chefspec/tree/v9.4.2) (2025-12-10)
 
 #### Merged Pull Requests
-- Ruby 3.4 Updates and Test fixes [#19](https://github.com/chef/chefspec/pull/19) ([johnmccrae](https://github.com/johnmccrae))
+- Update to actions/checkout@v6 [#28](https://github.com/chef/chefspec/pull/28) ([dafyddcrosby](https://github.com/dafyddcrosby))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Update to actions/checkout@v6 [#28](https://github.com/chef/chefspec/pull/28) ([dafyddcrosby](https://github.com/dafyddcrosby)) <!-- 9.4.2 -->
+- Remove osx_profile references. [#26](https://github.com/chef/chefspec/pull/26) ([williamtheaker](https://github.com/williamtheaker)) <!-- 9.4.1 -->
 - Ruby 3.4 Updates and Test fixes [#19](https://github.com/chef/chefspec/pull/19) ([johnmccrae](https://github.com/johnmccrae)) <!-- 9.4.0 -->
 - Misspelling of &#39;receive&#39; broke downstream [#17](https://github.com/chef/chefspec/pull/17) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.3.15 -->
 - Adding chef/chef&#39;s CODEOWNERS to chefspec [#16](https://github.com/chef/chefspec/pull/16) ([jaymzh](https://github.com/jaymzh)) <!-- 9.3.14 -->
