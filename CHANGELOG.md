@@ -1,14 +1,15 @@
-<!-- latest_release 9.4.26 -->
-## [v9.4.26](https://github.com/chef/chefspec/tree/v9.4.26) (2026-09-15)
+<!-- latest_release 9.5.0 -->
+## [v9.5.0](https://github.com/chef/chefspec/tree/v9.5.0) (2026-09-18)
 
 #### Merged Pull Requests
-- Honor the globally configured platform in example groups [#53](https://github.com/chef/chefspec/pull/53) ([tas50](https://github.com/tas50))
+- Add feature request issue template [#59](https://github.com/chef/chefspec/pull/59) ([tpowell-progress](https://github.com/tpowell-progress))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Add feature request issue template [#59](https://github.com/chef/chefspec/pull/59) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.5.0 -->
 - Honor the globally configured platform in example groups [#53](https://github.com/chef/chefspec/pull/53) ([tas50](https://github.com/tas50)) <!-- 9.4.26 -->
 - Ignore gem options when resolving cookbook gem metadata [#52](https://github.com/chef/chefspec/pull/52) ([tas50](https://github.com/tas50)) <!-- 9.4.25 -->
 - Expose Chef&#39;s template helper variables when rendering [#51](https://github.com/chef/chefspec/pull/51) ([tas50](https://github.com/tas50)) <!-- 9.4.24 -->
