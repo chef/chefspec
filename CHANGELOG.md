@@ -1,14 +1,15 @@
-<!-- latest_release 9.5.1 -->
-## [v9.5.1](https://github.com/chef/chefspec/tree/v9.5.1) (2026-10-12)
+<!-- latest_release 9.5.2 -->
+## [v9.5.2](https://github.com/chef/chefspec/tree/v9.5.2) (2026-10-12)
 
 #### Merged Pull Requests
-- Add DCO check workflow with pinned actions [#61](https://github.com/chef/chefspec/pull/61) ([tpowell-progress](https://github.com/tpowell-progress))
+- Remove extracted BFF acceptance examples [#60](https://github.com/chef/chefspec/pull/60) ([tpowell-progress](https://github.com/tpowell-progress))
 <!-- latest_release -->
 
 <!-- release_rollup since=9.3.8 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Remove extracted BFF acceptance examples [#60](https://github.com/chef/chefspec/pull/60) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.5.2 -->
 - Add DCO check workflow with pinned actions [#61](https://github.com/chef/chefspec/pull/61) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.5.1 -->
 - Add feature request issue template [#59](https://github.com/chef/chefspec/pull/59) ([tpowell-progress](https://github.com/tpowell-progress)) <!-- 9.5.0 -->
 - Honor the globally configured platform in example groups [#53](https://github.com/chef/chefspec/pull/53) ([tas50](https://github.com/tas50)) <!-- 9.4.26 -->
